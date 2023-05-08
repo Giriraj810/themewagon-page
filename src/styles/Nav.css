@@ -1,0 +1,24 @@
+.nav-bar {
+  width: 50%;
+}
+.nav-bar li {
+  display: flex;
+  float: left;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  padding: 2.8rem 2rem;
+  font-weight: bold;
+  color: rgb(34, 34, 34);
+}
+li .nav-link-join{
+    background-color: #EE4524;
+    padding: 2.8rem 5.89rem;
+    font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+li .nav-link:hover{
+    color: aqua;
+}
