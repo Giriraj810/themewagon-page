@@ -1,6 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGraduationCap, FaBookOpen, FaGlobe, FaHome, FaArrowRight } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaBookOpen,
+  FaGlobe,
+  FaHome,
+  FaArrowRight,
+  FaTwitter,
+  FaInstagram,
+  FaFacebookF,
+} from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   const About = styled.section`
@@ -80,39 +90,137 @@ const About = () => {
         padding: 0 4%;
         h3 {
           color: #ee4524;
-          font-size:1.7rem;
-          font-weight:bolder;
+          font-size: 1.7rem;
+          font-weight: bolder;
         }
         .unde {
           text-decoration: underline;
           font-weight: 900;
-          font-size:3rem;
+          font-size: 3rem;
         }
         .st {
           text-decoration: line-through;
           font-weight: 900;
-          font-size:3rem;
+          font-size: 3rem;
         }
         h2 {
           font-weight: 700;
           font-size: 4rem;
         }
         p {
-          padding: 1rem 0;
-          font-size:1.5rem;
+          padding: 0.75rem 0;
+          font-size: 1.5rem;
         }
-        .ul-main{
-          display:flex;
-          float:left;
-          width:100%;
-          .ul-1,.ul-2{
-            width:100%;
-            font-size:2rem;
-            
-          
+        .ul-main {
+          display: flex;
+          float: left;
+          width: 100%;
+          .ul-1,
+          .ul-2 {
+            width: 100%;
+            font-size: 2rem;
+            p {
+              font-size: 2rem;
+            }
+            button {
+              padding: 1.5rem 4rem;
+              background-color: #ee3524;
+              color: #fff;
+              font-size: 1.7rem;
+              font-weight: 900;
+              border: none;
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .instructors {
+      position: relative;
+      top: -300px;
+      .instructors-title {
+        color: #ee3524;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 900;
+        h2 {
+          padding: 1rem 0;
+        }
+        .unde {
+          text-decoration: underline;
+          font-weight: 900;
+          font-size: 2rem;
+        }
+        .st {
+          text-decoration: line-through;
+          font-weight: 900;
+          font-size: 2rem;
+        }
+      }
+      .instructors-container-main {
+        position: relative;
+        padding: 0 7.8%;
+        display: flex;
+        float: left;
+        .container-2 {
+          margin: 0 1.3rem;
+          background-color: #f7d2cb;
+          position: relative;
+          z-index: 1;
+          width: 25%;
+          text-align: center;
+          padding: 0 0 1rem 0;
+          letter-spacing: 1px;
+          overflow: hidden !important;
+          h3 {
+            position: relative;
+            top: -20px;
+            font-size: 2rem;
+            font-weight: 900;
+          }
+          p {
+            top: -20px;
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 600;
           }
 
+          img {
+            z-index: 0;
+            height: 72%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-out;
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .social-media {
+            background-color: #f7d2cb;
+            position: relative;
+            width: 50%;
+            padding: 0.4rem 0;
+            margin: 0 25%;
+            top: -30px;
+
+            * {
+              margin: 0.5rem;
+            }
+          }
         }
+      }
+    }
+    .bottom-part {
+      display: flex;
+      float: left;
+      background-color: #111;
+      .quick-link {
+        background-color: #777;
+        color:#fff;
+        display:block;
+
       }
     }
   `;
@@ -184,41 +292,148 @@ const About = () => {
           <div className="ul-main">
             <div className="ul-1">
               <p>
-                <FaArrowRight size={20} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
                 Skilled Instructors
               </p>
-              
+
               <p>
-                <FaArrowRight size={20} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
                 International Certificate
               </p>
-              
+
               <p>
-                <FaArrowRight size={20} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
                 Online Classes
               </p>
-              
+              <button>Read More</button>
             </div>
             <div className="ul-2">
               <p>
-                <FaArrowRight size={20} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
                 Online Classes
               </p>
-              
+
               <p>
-                <FaArrowRight size={20} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
                 Skilled Instructors
               </p>
-              
+
               <p>
-                /
-                <FaArrowRight size={20} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
                 International Certificate
               </p>
-              
             </div>
           </div>
         </div>
+      </div>
+      <div className="instructors">
+        <div className="instructors-title">
+          <span className="unde">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="st">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp; INSTRUCTORS &nbsp;&nbsp;&nbsp;&nbsp;
+          <span className="unde">
+            <span className="st">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <h2>Expert Instructors</h2>
+        </div>
+        <div className="instructors-container-main">
+          <div className="container-2">
+            <img src="../images/team-1.jpg" alt="team-1" />
+            <div className="social-media">
+              <FaFacebookF
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaTwitter
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaInstagram
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+            </div>
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+          <div className="container-2">
+            <img src="../images/team-2.jpg" alt="team-1" />
+            <div className="social-media">
+              <FaFacebookF
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaTwitter
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaInstagram
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+            </div>
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+          <div className="container-2">
+            <img src="../images/team-3.jpg" alt="team-1" />
+            <div className="social-media">
+              <FaFacebookF
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaTwitter
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaInstagram
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+            </div>
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+          <div className="container-2">
+            <img src="../images/team-4.jpg" alt="team-1" />
+            <div className="social-media">
+              <FaFacebookF
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaTwitter
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+              <FaInstagram
+                size={30}
+                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+              />
+            </div>
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+        </div>
+      </div>
+      <div className="bottom-part">
+        <div className="quick-link">
+          <h4>Quick Link</h4>
+          <NavLink to="/">About Us</NavLink>
+          <NavLink to="/">Contact Us</NavLink>
+          <NavLink to="/">Privacy Policy</NavLink>
+          <NavLink to="/">Terms & Condition</NavLink>
+          <NavLink to="/">FAQs & Help</NavLink>
+        </div>
+        <div className="contact"></div>
+        <div className="gallery"></div>
+        <div className="Newsletter"></div>
       </div>
     </About>
   );
