@@ -10,7 +10,6 @@ import {
   FaInstagram,
   FaFacebookF,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 
 const About = () => {
   const About = styled.section`
@@ -212,17 +211,7 @@ const About = () => {
         }
       }
     }
-    .bottom-part {
-      display: flex;
-      float: left;
-      background-color: #111;
-      .quick-link {
-        background-color: #777;
-        color:#fff;
-        display:block;
-
-      }
-    }
+   
   `;
   return (
     <About>
@@ -422,19 +411,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="bottom-part">
-        <div className="quick-link">
-          <h4>Quick Link</h4>
-          <NavLink to="/">About Us</NavLink>
-          <NavLink to="/">Contact Us</NavLink>
-          <NavLink to="/">Privacy Policy</NavLink>
-          <NavLink to="/">Terms & Condition</NavLink>
-          <NavLink to="/">FAQs & Help</NavLink>
-        </div>
-        <div className="contact"></div>
-        <div className="gallery"></div>
-        <div className="Newsletter"></div>
-      </div>
+    
     </About>
   );
 };
