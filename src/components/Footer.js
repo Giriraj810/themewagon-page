@@ -19,13 +19,12 @@ const Footer = () => {
 
       justify-content: space-between;
       align-items: center;
-      border: 1px solid white;
 
       .quick-link,
       .contact,.gallery,.newsletter {
-        border:1px solid red;
         width:25%;
         height:20rem;
+        padding-right:2rem;
         h3 {
           color: white;
           background-color: #pink;
@@ -40,7 +39,7 @@ const Footer = () => {
         .col-1{
           display:flex;
           float:left;
-          ]
+          
         }
         .socialmedia {
           * {
@@ -53,19 +52,22 @@ const Footer = () => {
         }
         img{
         height:6rem;
-        padding:0.25rem;
+        padding:0.5rem;
         }
         .email-signup{
-          width:25%;
           display:flex;
           float:left;
         input{
-          width:17rem;
+          width:18rem;
         }
         button{
-          padding:1rem 0rem;
+          background-color:#ee3524;
+          color:#fff;
+          font-weight:1000;
+          border:none;
+          padding-inline:2rem;
         }
-        }
+      }
 
         a {
           font-size: 1.5rem;
@@ -169,11 +171,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="newsletter">
+          
           <h3>Newsletter</h3>
           <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
           <div className="email-signup">
-            <input type="email" placeholder="Your E-Mail" name="email" />
-            <button type="submit">Sign Up</button>
+            <input type="email" placeholder="Your email" name="email" />
+            <button type="submit">SignUp</button>
           </div>
         </div>
       </div>
