@@ -1,0 +1,347 @@
+import React from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { FaStar, FaUser, FaClock, FaUserTie } from "react-icons/fa";
+
+const Courses = () => {
+  const Courses = styled.section`
+    .carousel-1 {
+      width: 100%;
+      height: 320px;
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
+        url(../images/carousel-1.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .carousel-content {
+        width: 30%;
+        top: 26%;
+        left: 35%;
+        position: relative;
+        color: #fff;
+        h1 {
+          color: #fff;
+          font-weight: 800;
+          font-size: 6.5rem;
+          text-align: center;
+        }
+        h3 {
+          color: #fff;
+          font-weight: 500;
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
+    }
+    .course-title {
+position:relative;
+    color: #ee3524;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 900;
+      margin-top: 100px;
+      .unde {
+        text-decoration: underline;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+      .st {
+        text-decoration: line-through;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+      h2 {
+        font-weight: 900;
+        font-size: 4rem;
+      }
+    }
+    .categories {
+      padding: 2% 8% 0 8%;
+      display: flex;
+      float: left;
+
+      .three-box {
+        width: 59%;
+        .upper {
+          position: relative;
+          margin: 0.5rem 0.5rem 0;
+          overflow: hidden !important;
+          img {
+            height: 23.5rem;
+            width: 100%;\
+            object-fit: cover;
+            overflow-clip-margin: content-box;
+            transition: transform 0.3s ease-out;
+          }
+          img:hover {
+            transform: scale(1.2);
+          }
+          .box {
+            position: absolute;
+            background-color: #fff;
+            padding: 1rem;
+            z-index: 77;
+            bottom: 0rem;
+            right: 0rem;
+            p {
+              color: #ee3524;
+            }
+          }
+        }
+        .lower-main {
+          display: flex;
+          float: left;
+          .lower {
+            display: flex;
+            margin: 0.5rem 0.5rem 0;
+            position: relative;
+            overflow: hidden !important;
+            float: left;
+            img {
+              height: 23.5rem;
+              overflow-clip-margin: content-box;
+              transition: transform 0.3s ease-out;
+              overflow: clip;
+              object-fit: contain;
+              width: 100%;
+            }
+            img:hover {
+              transform: scale(1.2);
+            }
+            .box {
+              position: absolute;
+              background-color: #fff;
+              padding: 1rem;
+              z-index: 77;
+              bottom: 0rem;
+              right: 0rem;
+              p {
+                color: #ee3524;
+              }
+            }
+          }
+        }
+      }
+      .one-box {
+        margin: 1rem;
+        position: relative;
+        width: 41%;
+        overflow: hidden !important;
+        img {
+          height: 48rem;
+          width: 100%;
+          overflow-clip-margin: content-box;
+          transition: transform 0.3s ease-out;
+        }
+        img:hover {
+          transform: scale(1.2);
+        }
+        .box {
+          position: absolute;
+          background-color: #fff;
+          padding: 1rem;
+          z-index: 77;
+          bottom: 0rem;
+          right: 0rem;
+          p {
+            color: #ee3524;
+          }
+        }
+      }
+    }
+    .courses{
+      display:flex;
+      padding:7% 8%;
+      background-color:green;
+      float:left;
+      .contain-1{
+        margin:0.5rem;
+        width:23%;
+        background-color:yellow;
+        .about{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button{
+            border-start-start-radius:10px;
+            border-end-start-radius:10px;
+
+          }          
+        }
+        img{
+          width:100%;
+          height:20rem;
+        }
+
+      }
+    }
+  `;
+  return (
+    <Courses>
+      <div className="carousel-1">
+        <div className="carousel-content">
+          <h1>Courses</h1>
+          <h3>
+            Home &nbsp; &nbsp;/ &nbsp;&nbsp; Pages &nbsp;&nbsp; / &nbsp;&nbsp;
+            Courses
+          </h3>
+        </div>
+      </div>
+      <div className="course-title">
+        <span className="unde">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp; CATEGORIES &nbsp;&nbsp;&nbsp;&nbsp;
+        <span className="unde">
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <h2>Courses Categories</h2>
+      </div>
+      <div className="categories">
+        <div className="three-box">
+          <div className="upper">
+            <img src="../images/cat-1.jpg" alt="cat" />
+            <NavLink to="/">
+              <div className="box">
+                <h3>Web Design</h3>
+                <p>39 Videos</p>
+              </div>
+            </NavLink>
+          </div>
+          <div className="lower-main">
+            <div className="lower">
+              <img src="../images/cat-2.jpg" alt="cat" />
+              <NavLink to="/">
+                <div className="box">
+                  <h3>Web Design</h3>
+                  <p>39 Videos</p>
+                </div>
+              </NavLink>
+            </div>
+            <div className="lower">
+              <img src="../images/cat-3.jpg" alt="cat" />
+              <NavLink to="/">
+                <div className="box">
+                  <h3>Web Design</h3>
+                  <p>39 Videos</p>
+                </div>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+        <div className="one-box">
+          <img src="../images/cat-4.jpg" alt="cat" />
+          <NavLink to="/">
+            <div className="box">
+              <h3>Web Design</h3>
+              <p>39 Videos</p>
+            </div>
+          </NavLink>
+        </div>
+      </div>
+      <div className="course-title">
+        <span className="unde">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp; COURSES &nbsp;&nbsp;&nbsp;&nbsp;
+        <span className="unde">
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <h2>Popular Courses</h2>
+      </div>
+      <div className="courses">
+        <div className="contain-1">
+          <img src="../images/course-1.jpg" alt="course" />
+          <div className="about">
+            <button>Read More</button>
+            <button>Join Now</button>
+          </div>
+          <h3>$149.00</h3>
+          <p>
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            (123)
+          </p>
+          <h4>Web Design & Development Course for Beginners</h4>
+          <p>
+            <span>
+              <FaUserTie size={15} style={{ fill: "#ee3524" }} /> John Doe
+            </span>
+            <span>
+              <FaClock size={15} style={{ fill: "#ee3524" }} /> 1.49 Hrs
+            </span>
+            <FaUser size={15} style={{ fill: "#ee3524" }} />{" "}
+            <span>30 Students</span>
+          </p>
+        </div>
+        <div className="contain-1">
+          <img src="../images/course-1.jpg" alt="course" />
+          <div className="about"></div>
+          <h3>$149.00</h3>
+          <p>
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            (123)
+          </p>
+          <h4>Web Design & Development Course for Beginners</h4>
+          <p>
+            <span>
+              <FaUserTie size={15} style={{ fill: "#ee3524" }} /> John Doe
+            </span>
+            <span>
+              <FaClock size={15} style={{ fill: "#ee3524" }} /> 1.49 Hrs
+            </span>
+            <FaUser size={15} style={{ fill: "#ee3524" }} />{" "}
+            <span>30 Students</span>
+          </p>
+        </div>
+        <div className="contain-1">
+          <img src="../images/course-1.jpg" alt="course" />
+          <div className="about"></div>
+          <h3>$149.00</h3>
+          <p>
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            (123)
+          </p>
+          <h4>Web Design & Development Course for Beginners</h4>
+          <p>
+            <span>
+              <FaUserTie size={15} style={{ fill: "#ee3524" }} /> John Doe
+            </span>
+            <span>
+              <FaClock size={15} style={{ fill: "#ee3524" }} /> 1.49 Hrs
+            </span>
+            <FaUser size={15} style={{ fill: "#ee3524" }} />{" "}
+            <span>30 Students</span>
+          </p>
+        </div>
+      </div>
+    </Courses>
+  );
+};
+
+export default Courses;

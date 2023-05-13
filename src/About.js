@@ -14,12 +14,10 @@ import {
 const About = () => {
   const About = styled.section`
     background-color: ${({ theme }) => theme.colors.bg};
-    position: relative;
     .carousel-1 {
       width: 100%;
-      height: 760px;
+      height: 320px;
       position: relative;
-      top: -220px;
       z-index: 2;
       background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
         url(../images/carousel-1.jpg);
@@ -28,15 +26,14 @@ const About = () => {
       background-size: cover;
       .carousel-content {
         width: 30%;
-        top: 40%;
+        top: 26%;
         left: 35%;
         position: relative;
-        z-index: 999;
         color: #fff;
         h1 {
           color: #fff;
-          font-weight: 1000;
-          font-size: 7rem;
+          font-weight: 800;
+          font-size: 6.5rem;
           text-align: center;
         }
         h3 {
@@ -51,34 +48,31 @@ const About = () => {
       background-color: #fff;
       display: flex;
       float: left;
-      padding: 7% 8% 0 8%;
+      padding: 7% 8% 7% 8%;
       position: relative;
-      top: -443px;
       z-index: 5;
-    }
-    .container-1 {
-      margin: 0 1.3rem;
-      padding: 3.8rem 3rem;
-      background-color: #f7d2cb;
-      align-items: center;
-      text-align: center;
-      h4 {
-        padding: 2rem 1rem;
-        font-size: 1.9rem;
-        font-weight: 900;
-        letter-spacing: 0.1rem;
-      }
-      span {
-        font-size: 1.6rem;
+
+      .container-1 {
+        margin: 0 1.3rem;
+        padding: 3.8rem 3rem;
+        background-color: #f7d2cb;
+        align-items: center;
+        text-align: center;
+        h4 {
+          padding: 2rem 1rem;
+          font-size: 1.9rem;
+          font-weight: 900;
+          letter-spacing: 0.1rem;
+        }
+        span {
+          font-size: 1.6rem;
+        }
       }
     }
     .about-us {
-      position: relative;
-      top: -350px;
       display: flex;
       float: left;
       padding: 0 8.5%;
-
       .about-img {
         width: 110%;
         height: 445px;
@@ -86,6 +80,7 @@ const About = () => {
         object-fit: cover;
       }
       .about-content {
+        position: relative;
         padding: 0 4%;
         h3 {
           color: #ee4524;
@@ -136,8 +131,10 @@ const About = () => {
     }
     .instructors {
       position: relative;
-      top: -300px;
+      top:5rem;
+
       .instructors-title {
+        position: relative;
         color: #ee3524;
         font-size: 1.8rem;
         text-align: center;
@@ -173,12 +170,10 @@ const About = () => {
           overflow: hidden !important;
           h3 {
             position: relative;
-            top: -20px;
             font-size: 2rem;
             font-weight: 900;
           }
           p {
-            top: -20px;
             position: relative;
             font-size: 1.2rem;
             font-weight: 600;
@@ -211,7 +206,6 @@ const About = () => {
         }
       }
     }
-   
   `;
   return (
     <About>
@@ -331,87 +325,86 @@ const About = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;
           </span>
           <h2>Expert Instructors</h2>
-        </div>
-        <div className="instructors-container-main">
-          <div className="container-2">
-            <img src="../images/team-1.jpg" alt="team-1" />
-            <div className="social-media">
-              <FaFacebookF
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaTwitter
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaInstagram
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
+          <div className="instructors-container-main">
+            <div className="container-2">
+              <img src="../images/team-1.jpg" alt="team-1" />
+              <div className="social-media">
+                <FaFacebookF
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaTwitter
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaInstagram
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+              </div>
+              <h3>Instructor Name</h3>
+              <p>Designation</p>
             </div>
-            <h3>Instructor Name</h3>
-            <p>Designation</p>
-          </div>
-          <div className="container-2">
-            <img src="../images/team-2.jpg" alt="team-1" />
-            <div className="social-media">
-              <FaFacebookF
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaTwitter
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaInstagram
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
+            <div className="container-2">
+              <img src="../images/team-2.jpg" alt="team-1" />
+              <div className="social-media">
+                <FaFacebookF
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaTwitter
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaInstagram
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+              </div>
+              <h3>Instructor Name</h3>
+              <p>Designation</p>
             </div>
-            <h3>Instructor Name</h3>
-            <p>Designation</p>
-          </div>
-          <div className="container-2">
-            <img src="../images/team-3.jpg" alt="team-1" />
-            <div className="social-media">
-              <FaFacebookF
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaTwitter
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaInstagram
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
+            <div className="container-2">
+              <img src="../images/team-3.jpg" alt="team-1" />
+              <div className="social-media">
+                <FaFacebookF
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaTwitter
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaInstagram
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+              </div>
+              <h3>Instructor Name</h3>
+              <p>Designation</p>
             </div>
-            <h3>Instructor Name</h3>
-            <p>Designation</p>
-          </div>
-          <div className="container-2">
-            <img src="../images/team-4.jpg" alt="team-1" />
-            <div className="social-media">
-              <FaFacebookF
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaTwitter
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
-              <FaInstagram
-                size={30}
-                style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
-              />
+            <div className="container-2">
+              <img src="../images/team-4.jpg" alt="team-1" />
+              <div className="social-media">
+                <FaFacebookF
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaTwitter
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+                <FaInstagram
+                  size={30}
+                  style={{ fill: "#fff", background: "#ee3524", padding: "7" }}
+                />
+              </div>
+              <h3>Instructor Name</h3>
+              <p>Designation</p>
             </div>
-            <h3>Instructor Name</h3>
-            <p>Designation</p>
           </div>
         </div>
       </div>
-    
     </About>
   );
 };
