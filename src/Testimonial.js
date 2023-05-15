@@ -1,11 +1,9 @@
 import React from "react";
-import { BsExclamationTriangle } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "./components/Footer";
 
-const ErrorPage = () => {
-  const ErrorPage = styled.section`
+const Testimonial = () => {
+  const Testimonial = styled.section`
     background-color: ${({ theme }) => theme.colors.bg};
     .carousel-1 {
       width: 100%;
@@ -37,61 +35,58 @@ const ErrorPage = () => {
         }
       }
     }
-    .error-page {
+    .testimonial-title {
       position: relative;
-      align-items: center;
-      padding: 5% 28% 0 28%;
-      justify-content: center;
+      color: #ee3524;
+      font-size: 1.8rem;
       text-align: center;
+      font-weight: 900;
+      margin-top: 100px;
 
-      h1 {
+      h2 {
+        padding: 1rem 0;
+      }
+      .unde {
+        text-decoration: underline;
         font-weight: 900;
-        font-size: 8rem;
+        font-size: 2rem;
       }
-      h3 {
-        font-size: 4rem;
-        font-weight: 700;
-      }
-      p {
-        padding-block: 2rem;
-      }
-      button {
-        background-color: #ee3524;
-        border-radius: 35px;
-        border: none;
-        color: #fff;
-        padding: 1.5rem 4rem;
-      }
-      button:hover {
-        background-color: #fb6244;
+      .st {
+        text-decoration: line-through;
+        font-weight: 900;
+        font-size: 2rem;
       }
     }
   `;
   return (
-    <ErrorPage>
+    <Testimonial>
       <div className="carousel-1">
         <div className="carousel-content">
-          <h1>Not Found</h1>
+          <h1>Courses</h1>
           <h3>
             Home &nbsp; &nbsp;/ &nbsp;&nbsp; Pages &nbsp;&nbsp; / &nbsp;&nbsp;
-            404
+            Testimonial
           </h3>
         </div>
       </div>
-      <div className="error-page">
-        <BsExclamationTriangle size={80} style={{ fill: "#ee3524" }} />
-        <h1>404</h1>
-        <h3>Page Not Found</h3>
-        <p>
-          We’re sorry, the page you have looked for does not exist in our
-          website! Maybe go to our home page or try to use a search?
-        </p>
-        <NavLink to={"/"}>
-          <button>Go Back To Home</button>
-        </NavLink>
+      <div className="testimonial-title">
+        <span className="unde">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp; TESTIMONIAL &nbsp;&nbsp;&nbsp;&nbsp;
+        <span className="unde">
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <h2>Our Students Say!</h2>
       </div>
       <Footer/>
-    </ErrorPage>
+    </Testimonial>
   );
 };
-export default ErrorPage;
+export default Testimonial;

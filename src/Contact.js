@@ -2,9 +2,11 @@ import React from "react";
 import { FaEnvelopeOpen, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Footer from "./components/Footer";
 
 const Contact = () => {
   const Contact = styled.section`
+  position:relative;
     .carousel-1 {
       width: 100%;
       height: 320px;
@@ -38,10 +40,10 @@ const Contact = () => {
     }
     .contact {
       padding: 0 11rem;
-
       margin-top: 9rem;
       .contact-title {
         color: #ee3524;
+        position:relative;
         font-size: 1.8rem;
         text-align: center;
         font-weight: 900;
@@ -60,7 +62,6 @@ const Contact = () => {
     .contact-main {
       padding-top: 4rem;
       position: relative;
-      height: 30rem;
       display:flex;
       float:left;
       .contact-address,
@@ -203,6 +204,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </Contact>
   );
 };

@@ -5,16 +5,13 @@ import { FaChevronRight, FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, 
 
 const Footer = () => {
   const MainFooter = styled.footer`
-    background-color: #181d38;
-    position: relative;
-    height: 40rem;
     width: 100%;
-    margin-top: 56rem;
-    padding: 0 11rem;
     .main {
       display: flex;
       position: relative;
-      padding: 6rem 0.5rem 0 0.5rem;
+      padding: 2% 8% 0 8%;
+margin-top:40rem;
+      background-color: #181d38;
 
       justify-content: space-between;
       align-items: center;
@@ -84,29 +81,32 @@ const Footer = () => {
       }
     }
     .copyright {
-      display:flex;
-      float:left;
-      margin-block: 30px;
+      display: flex;
+      float: left;
+      width:100%;
+      background-color: #181d38;
+      padding-block: 30px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      .left{
-        p{
-        color:#fff;
-          a{
-          color:#fff;
-          text-decoration:underline;
+      .left {
+        width:50%;
+        p {
+          color: #fff;
+          a {
+            color: #fff;
+            text-decoration: underline;
           }
         }
       }
-      .right{
-        align-items:center;
-        ul{
-          display:flex;
-          float:left;
-          li{
-            border-inline:1px rgba(255,255,255,0.1);
-            a{
-              color:#fff;
+      .right {
+        align-items: center;
 
+        ul {
+          display: flex;
+          float: left;
+          li {
+            border-inline: 1px rgba(255, 255, 255, 0.1);
+            a {
+              color: #fff;
             }
           }
         }

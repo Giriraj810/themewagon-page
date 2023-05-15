@@ -10,6 +10,7 @@ import {
   FaInstagram,
   FaFacebookF,
 } from "react-icons/fa";
+import Footer from "./components/Footer";
 
 const About = () => {
   const About = styled.section`
@@ -131,7 +132,7 @@ const About = () => {
     }
     .instructors {
       position: relative;
-      top:5rem;
+      top: 5rem;
 
       .instructors-title {
         position: relative;
@@ -155,14 +156,12 @@ const About = () => {
       }
       .instructors-container-main {
         position: relative;
-        padding: 0 7.8%;
+        padding: 0 7.8% 6% 7.8%;
         display: flex;
         float: left;
         .container-2 {
           margin: 0 1.3rem;
           background-color: #f7d2cb;
-          position: relative;
-          z-index: 1;
           width: 25%;
           text-align: center;
           padding: 0 0 1rem 0;
@@ -194,8 +193,8 @@ const About = () => {
           .social-media {
             background-color: #f7d2cb;
             position: relative;
-            width: 50%;
-            padding: 0.4rem 0;
+            width: 53%;
+            padding: 0.1rem 0;
             margin: 0 25%;
             top: -30px;
 
@@ -405,6 +404,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </About>
   );
 };

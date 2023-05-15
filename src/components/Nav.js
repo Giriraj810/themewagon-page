@@ -1,8 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Nav.css"
 
 const Nav = () => {
+   const [isOpen, setIsOpen] = useState(false);
+
+   const toggleDropdown = () => {
+     setIsOpen(!isOpen);
+   };
 
   return (
     <>
@@ -23,16 +28,30 @@ const Nav = () => {
               COURSES
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/PAGES" className="nav-link">
-              PAGES 
-            </NavLink>
+          <li
+            className="dropdown-toggle dropdown nav-link"
+            onMouseEnter={toggleDropdown}>
+            PAGES
+            {isOpen && (
+              <ul className="dropdown-menu">
+                <li>
+                  <a href="/team">Our Team</a>
+                </li>
+                <li>
+                  <a href="/testimonial">Our Testimonial</a>
+                </li>
+                <li>
+                  <a href="/404">404 Page</a>
+                </li>
+              </ul>
+            )}
           </li>
+
           <li>
             <NavLink to="/contact" className="nav-link">
               CONTACT
             </NavLink>
-          </li>{" "}
+          </li>
           <li>
             <NavLink to="/contact" className="nav-link-join">
               Join Now &rarr;

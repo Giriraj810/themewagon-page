@@ -7,9 +7,10 @@ import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Courses from "./Courses";
 import Pages from "./Pages";
+import Team from "./Team";
+import Testimonial from "./Testimonial";
 
 const App = () => {
   const theme = {
@@ -49,8 +50,9 @@ const App = () => {
           <Route path="/courses" element={<Courses />} />
           <Route path="/pages" element={<Pages />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/testimonial" element={<Testimonial />} />
         </Routes>
-        <Footer />
       </Router>
     </ThemeProvider>
   );

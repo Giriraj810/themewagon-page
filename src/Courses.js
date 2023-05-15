@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { FaStar, FaUser, FaClock, FaUserTie } from "react-icons/fa";
+import Footer from "./components/Footer";
+import Carousel from "react-bootstrap/Carousel";
 
 const Courses = () => {
   const Courses = styled.section`
@@ -153,28 +155,71 @@ position:relative;
     }
     .courses{
       display:flex;
-      padding:7% 8%;
-      background-color:green;
+      padding: 7% 8%;
       float:left;
+      
       .contain-1{
-        margin:0.5rem;
-        width:23%;
-        background-color:yellow;
+        margin:1.25rem;
+        position:relative;
+        background-color:#f7d2cb;
+        text-align:center;
+        
+
+        h3{
+          font-size:3em;
+          padding-top:1.5rem;
+          font-weight:900;
+        }
+        h4{
+          font-size:2rem;
+          padding:1.5rem 4rem;
+        }
+        span{
+          border-top:1px solid black;
+          padding:0.6rem 1.15rem;
+        }
         .about{
           display: flex;
+          position:absolute;
+          top:42%;
+          left:23%;
           justify-content: center;
-          align-items: center;
-          button{
-            border-start-start-radius:10px;
-            border-end-start-radius:10px;
+          button:hover{
+            background-color:#f56d60;
 
-          }          
+          }
+          button{
+            background-color:#ee3524;
+            color:#fff;
+            padding:0.5rem 1.5rem;
+            font-size:1.4rem;
+            border:none;
+          }
+          .read-more{
+            border-start-start-radius:25px;
+            border-end-start-radius:25px;
+            border-right:1px solid  #fff;
+          } 
+          .join-now{
+            border-start-end-radius:25px;
+            border-end-end-radius:25px;             
+          }         
         }
         img{
-          width:100%;
-          height:20rem;
+          height:23.5rem;
+          object-fit:cover;
         }
+        
 
+      }
+    }
+    .slider-main{
+      height:40rem;
+      display:flex;
+      .card-1,.card-2,.card-3,.card-4{
+        width:25%;
+        height:38rem;
+        border:1px solid black;
       }
     }
   `;
@@ -267,16 +312,35 @@ position:relative;
         <div className="contain-1">
           <img src="../images/course-1.jpg" alt="course" />
           <div className="about">
-            <button>Read More</button>
-            <button>Join Now</button>
+            <NavLink to="/">
+              <button className="read-more">Read More</button>
+            </NavLink>
+            <NavLink>
+              <button className="join-now">Join Now</button>
+            </NavLink>
           </div>
           <h3>$149.00</h3>
           <p>
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
             (123)
           </p>
           <h4>Web Design & Development Course for Beginners</h4>
@@ -287,20 +351,45 @@ position:relative;
             <span>
               <FaClock size={15} style={{ fill: "#ee3524" }} /> 1.49 Hrs
             </span>
-            <FaUser size={15} style={{ fill: "#ee3524" }} />{" "}
-            <span>30 Students</span>
+
+            <span>
+              <FaUser size={15} style={{ fill: "#ee3524" }} />
+              30 Students
+            </span>
           </p>
         </div>
         <div className="contain-1">
           <img src="../images/course-1.jpg" alt="course" />
-          <div className="about"></div>
+          <div className="about">
+            <NavLink to="/">
+              <button className="read-more">Read More</button>
+            </NavLink>
+            <NavLink>
+              <button className="join-now">Join Now</button>
+            </NavLink>
+          </div>
           <h3>$149.00</h3>
           <p>
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
             (123)
           </p>
           <h4>Web Design & Development Course for Beginners</h4>
@@ -311,20 +400,45 @@ position:relative;
             <span>
               <FaClock size={15} style={{ fill: "#ee3524" }} /> 1.49 Hrs
             </span>
-            <FaUser size={15} style={{ fill: "#ee3524" }} />{" "}
-            <span>30 Students</span>
+
+            <span>
+              <FaUser size={15} style={{ fill: "#ee3524" }} />
+              30 Students
+            </span>
           </p>
         </div>
         <div className="contain-1">
           <img src="../images/course-1.jpg" alt="course" />
-          <div className="about"></div>
+          <div className="about">
+            <NavLink to="/">
+              <button className="read-more">Read More</button>
+            </NavLink>
+            <NavLink>
+              <button className="join-now">Join Now</button>
+            </NavLink>
+          </div>
           <h3>$149.00</h3>
           <p>
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
-            <FaStar size={15} style={{ fill: "#ee3524" }} />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
+            <FaStar
+              size={15}
+              style={{ marginInline: "3px", fill: "#ee3524" }}
+            />
             (123)
           </p>
           <h4>Web Design & Development Course for Beginners</h4>
@@ -335,11 +449,72 @@ position:relative;
             <span>
               <FaClock size={15} style={{ fill: "#ee3524" }} /> 1.49 Hrs
             </span>
-            <FaUser size={15} style={{ fill: "#ee3524" }} />{" "}
-            <span>30 Students</span>
+
+            <span>
+              <FaUser size={15} style={{ fill: "#ee3524" }} />
+              30 Students
+            </span>
           </p>
         </div>
       </div>
+      <div className="course-title">
+        <span className="unde">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp; TESTIMONIAL &nbsp;&nbsp;&nbsp;&nbsp;
+        <span className="unde">
+          <span className="st">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <h2>Our Students Say!</h2>
+      </div>
+      <div className="slider-main">
+        <div className="card-1"></div>
+        <div className="card-2"></div>
+        <div className="card-3"></div>
+        <div className="card-4"></div>
+      </div>
+      <Carousel fade>
+        <Carousel.Item>
+          <img
+            src="../images/team-1.jpg"
+            alt="team"
+            className="d-block w-100"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="../images/team-1.jpg"
+            alt="team"
+            className="d-block w-100"
+          />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="../images/team-1.jpg"
+            alt="team"
+            className="d-block w-100"
+          />
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+      <Footer />
     </Courses>
   );
 };
