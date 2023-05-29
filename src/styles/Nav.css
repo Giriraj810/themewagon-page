@@ -46,7 +46,7 @@ align-content: flex-end;  width: 10rem;
 }
 
 .nav-bar {
-  width: 53%;
+  width: 50%;
 }
 .nav-bar li {
   display: flex;
@@ -61,7 +61,7 @@ align-content: flex-end;  width: 10rem;
 }
 li .nav-link-join{
     background-color: #EE4524;
-    padding: 2.8rem 4.6rem;
+    padding: 2.8rem 5.7rem;
     font-size: 1.4rem;
   font-weight: bold;
   color: rgb(255, 255, 255);

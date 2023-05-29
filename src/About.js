@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
 import {
   FaGraduationCap,
   FaBookOpen,
@@ -13,6 +13,16 @@ import {
 import Footer from "./components/Footer";
 
 const About = () => {
+  const fadeInUpAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+`;
   const About = styled.section`
     background-color: ${({ theme }) => theme.colors.bg};
     .carousel-1 {
@@ -52,6 +62,17 @@ const About = () => {
       padding: 7% 8% 7% 8%;
       position: relative;
       z-index: 5;
+      .container-1:hover {
+        position: relative;
+        animation: ${fadeInUpAnimation} 0.5s ease-in;
+
+        background-color: #ee3524;
+        color: #fff;
+      }
+
+      .container-1:hover .icon {
+        fill: #fff;
+      }
 
       .container-1 {
         margin: 0 1.3rem;
@@ -59,6 +80,9 @@ const About = () => {
         background-color: #f7d2cb;
         align-items: center;
         text-align: center;
+        .icon {
+          fill: #ee3524;
+        }
         h4 {
           padding: 2rem 1rem;
           font-size: 1.9rem;
@@ -219,7 +243,7 @@ const About = () => {
       </div>
       <div className="special">
         <div className="container-1">
-          <FaGraduationCap size={50} style={{ fill: "#EE4524" }} />
+          <FaGraduationCap size={50}  className="icon" />
           <h4>Skilled Instructors</h4>
           <span>
             Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet
@@ -227,7 +251,7 @@ const About = () => {
           </span>
         </div>
         <div className="container-1">
-          <FaGlobe size={50} style={{ fill: "#EE4524" }} />
+          <FaGlobe size={50}  className="icon" />
           <h4>Online Classes</h4>
           <span>
             Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet
@@ -235,7 +259,7 @@ const About = () => {
           </span>
         </div>
         <div className="container-1">
-          <FaHome size={50} style={{ fill: "#EE4524" }} />
+          <FaHome size={50}  className="icon" />
           <h4>Home Projects</h4>
           <span>
             Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet
@@ -243,7 +267,7 @@ const About = () => {
           </span>
         </div>
         <div className="container-1">
-          <FaBookOpen size={50} style={{ fill: "#EE4524" }} />
+          <FaBookOpen size={50}  className="icon" />
           <h4>Book Library</h4>
           <span>
             Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet
@@ -274,34 +298,34 @@ const About = () => {
           <div className="ul-main">
             <div className="ul-1">
               <p>
-                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#EE4524" }}  />
                 Skilled Instructors
               </p>
 
               <p>
-                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#EE4524" }}  />
                 International Certificate
               </p>
 
               <p>
-                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#EE4524" }}  />
                 Online Classes
               </p>
               <button>Read More</button>
             </div>
             <div className="ul-2">
               <p>
-                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#EE4524" }}  />
                 Online Classes
               </p>
 
               <p>
-                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#EE4524" }}  />
                 Skilled Instructors
               </p>
 
               <p>
-                <FaArrowRight size={15} style={{ fill: "#ee4524" }} />
+                <FaArrowRight size={15} style={{ fill: "#EE4524" }}  />
                 International Certificate
               </p>
             </div>
