@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { FaStar, FaUser, FaClock, FaUserTie } from "react-icons/fa";
 import Footer from "./components/Footer";
-import Carousel from "react-bootstrap/Carousel";
 
 const Courses = () => {
   const Courses = styled.section`
