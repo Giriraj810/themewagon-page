@@ -473,47 +473,7 @@ position:relative;
         </span>
         <h2>Our Students Say!</h2>
       </div>
-      <div className="slider-main">
-        <div className="card-1"></div>
-        <div className="card-2"></div>
-        <div className="card-3"></div>
-        <div className="card-4"></div>
-      </div>
-      <Carousel fade>
-        <Carousel.Item>
-          <img
-            src="../images/team-1.jpg"
-            alt="team"
-            className="d-block w-100"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src="../images/team-1.jpg"
-            alt="team"
-            className="d-block w-100"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src="../images/team-1.jpg"
-            alt="team"
-            className="d-block w-100"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      
       <Footer />
     </Courses>
   );
