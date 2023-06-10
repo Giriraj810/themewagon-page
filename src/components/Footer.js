@@ -17,7 +17,7 @@ margin-top:40rem;
       align-items: center;
 
       .quick-link,
-      .contact,
+      .contact-line,
       .gallery,
       .newsletter {
         width: 25%;
@@ -132,10 +132,10 @@ margin-top:40rem;
             <FaChevronRight /> Terms & Condition
           </NavLink>
           <NavLink to="/">
-            <FaChevronRight /> FAQs & Heshdhgdp
+            <FaChevronRight /> FAQs
           </NavLink>
         </div>
-        <div className="contact">
+        <div className="contact-line">
           <h3>Contact</h3>
           <p>
             <FaMapMarkerAlt style={{ fill: "#fff" }} /> &nbsp;123 Street, New
